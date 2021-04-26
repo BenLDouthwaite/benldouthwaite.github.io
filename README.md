@@ -1,3 +1,8 @@
+# TODO
+
+- [ ] Remove all auto-generated conent that isn't to be kept
+- [ ] Dark theme
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
