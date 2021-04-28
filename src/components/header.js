@@ -1,20 +1,16 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
+import React from "react"
+import { Helmet } from "react-helmet"
 
 const Header = props => {
-  const {
-    header,
-  } = props
+  const { header } = props
 
   return (
     <>
       <Helmet>
-        <body/>
+        <body />
       </Helmet>
       <header>
-        <div className="global-header">
-          {header}
-        </div>
+        <div className="global-header">{header}</div>
       </header>
     </>
   )
