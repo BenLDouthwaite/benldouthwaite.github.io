@@ -3,13 +3,10 @@ module.exports = {
     title: `BLD`,
     author: {
       name: `Ben Douthwaite`,
-      summary: `who lives and works in London copying useful things.`,
+      summary: `London based programmer, and amateur linguist / musician`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `Home for programming, linguistics and music notes.`,
+    siteUrl: `https://bendouthwaite.com`,
   },
   plugins: [
     `gatsby-plugin-image`,
