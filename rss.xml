@@ -1,11 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[BLD]]></title><description><![CDATA[Home for programming, linguistics and music notes.]]></description><link>https://bendouthwaite.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 28 Apr 2021 22:47:07 GMT</lastBuildDate><item><title><![CDATA[Hello, World]]></title><description><![CDATA[For a long time, I wanted to start a ‘portfolio’ site. 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[BLD]]></title><description><![CDATA[Home for programming, linguistics and music notes.]]></description><link>https://bendouthwaite.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 01 May 2021 22:41:15 GMT</lastBuildDate><item><title><![CDATA[Japanese : 日本語]]></title><description><![CDATA[Testing character inputs Hiragana : 平仮名 Katakana : カタカナ Kanji Will take more than a single page…]]></description><link>https://bendouthwaite.com/language/japanese/syllabaries/</link><guid isPermaLink="false">https://bendouthwaite.com/language/japanese/syllabaries/</guid><pubDate>Thu, 29 Apr 2021 23:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Testing character inputs&lt;/p&gt;
+&lt;h3&gt;Hiragana : 平仮名&lt;/h3&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;あ&lt;/td&gt;&lt;td&gt;い&lt;/td&gt;&lt;td&gt;う&lt;/td&gt;&lt;td&gt;え&lt;/td&gt;&lt;td&gt;お&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;か&lt;/td&gt;&lt;td&gt;き&lt;/td&gt;&lt;td&gt;く&lt;/td&gt;&lt;td&gt;け&lt;/td&gt;&lt;td&gt;こ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;さ&lt;/td&gt;&lt;td&gt;し&lt;/td&gt;&lt;td&gt;す&lt;/td&gt;&lt;td&gt;せ&lt;/td&gt;&lt;td&gt;そ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;た&lt;/td&gt;&lt;td&gt;ち&lt;/td&gt;&lt;td&gt;つ&lt;/td&gt;&lt;td&gt;て&lt;/td&gt;&lt;td&gt;と&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;な&lt;/td&gt;&lt;td&gt;に&lt;/td&gt;&lt;td&gt;ぬ&lt;/td&gt;&lt;td&gt;ね&lt;/td&gt;&lt;td&gt;の&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;は&lt;/td&gt;&lt;td&gt;ひ&lt;/td&gt;&lt;td&gt;ふ&lt;/td&gt;&lt;td&gt;へ&lt;/td&gt;&lt;td&gt;ほ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ま&lt;/td&gt;&lt;td&gt;み&lt;/td&gt;&lt;td&gt;む&lt;/td&gt;&lt;td&gt;め&lt;/td&gt;&lt;td&gt;も&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;や&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;ゆ&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;よ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ら&lt;/td&gt;&lt;td&gt;り&lt;/td&gt;&lt;td&gt;る&lt;/td&gt;&lt;td&gt;れ&lt;/td&gt;&lt;td&gt;ろ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;わ&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;を&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ん&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3&gt;Katakana : カタカナ&lt;/h3&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;ア&lt;/td&gt;&lt;td&gt;イ&lt;/td&gt;&lt;td&gt;ウ&lt;/td&gt;&lt;td&gt;エ&lt;/td&gt;&lt;td&gt;オ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;カ&lt;/td&gt;&lt;td&gt;ギ&lt;/td&gt;&lt;td&gt;ク&lt;/td&gt;&lt;td&gt;ケ&lt;/td&gt;&lt;td&gt;コ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;サ&lt;/td&gt;&lt;td&gt;シ&lt;/td&gt;&lt;td&gt;ス&lt;/td&gt;&lt;td&gt;セ&lt;/td&gt;&lt;td&gt;ソ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;タ&lt;/td&gt;&lt;td&gt;チ&lt;/td&gt;&lt;td&gt;ツ&lt;/td&gt;&lt;td&gt;テ&lt;/td&gt;&lt;td&gt;ト&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ナ&lt;/td&gt;&lt;td&gt;ニ&lt;/td&gt;&lt;td&gt;ヌ&lt;/td&gt;&lt;td&gt;ネ&lt;/td&gt;&lt;td&gt;ノ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ハ&lt;/td&gt;&lt;td&gt;ヒ&lt;/td&gt;&lt;td&gt;フ&lt;/td&gt;&lt;td&gt;ヘ&lt;/td&gt;&lt;td&gt;ホ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;マ&lt;/td&gt;&lt;td&gt;ミ&lt;/td&gt;&lt;td&gt;ム&lt;/td&gt;&lt;td&gt;メ&lt;/td&gt;&lt;td&gt;モ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ヤ&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;ユ&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;ヨ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ラ&lt;/td&gt;&lt;td&gt;リ&lt;/td&gt;&lt;td&gt;ル&lt;/td&gt;&lt;td&gt;レ&lt;/td&gt;&lt;td&gt;ロ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ワ&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;ヲ&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ン&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;td&gt;　&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3&gt;Kanji&lt;/h3&gt;
+&lt;p&gt;Will take more than a single page…&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello, World]]></title><description><![CDATA[For a long time, I wanted to start a ‘portfolio’ site.
 I would often start one as a project, trying to build from scratch and enjoyably…]]></description><link>https://bendouthwaite.com/hello-world/</link><guid isPermaLink="false">https://bendouthwaite.com/hello-world/</guid><pubDate>Wed, 28 Apr 2021 23:00:00 GMT</pubDate><content:encoded>&lt;p&gt;For a long time, I wanted to start a ‘portfolio’ site.
 I would often start one as a project, trying to build from scratch and enjoyably getting lost in the technology.
-My goal here is to focus on the content, using technology to streamline this. &lt;/p&gt;
+My goal here is to focus on the content, using technology to streamline this.&lt;/p&gt;
 &lt;p&gt;While this is my personal site, content will primarily cover:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Programming&lt;/li&gt;
 &lt;li&gt;Language study&lt;/li&gt;
 &lt;li&gt;Music&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Above all else, the goal is brevity and simplicity. Given that, this seems like sufficient introduction.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;Above all else, the goal is brevity and simplicity. Given that, this seems like sufficient introduction.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Site setup]]></title><description><![CDATA[Progress The site is built using gatsby, hosted on Github pages, using Amazon Route 53 for the domain Outstanding tasks: Allow searching…]]></description><link>https://bendouthwaite.com/programming/site-setup/</link><guid isPermaLink="false">https://bendouthwaite.com/programming/site-setup/</guid><pubDate>Wed, 28 Apr 2021 23:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Progress&lt;/h3&gt;
+&lt;p&gt;The site is built using gatsby, hosted on Github pages, using Amazon Route 53 for the domain&lt;/p&gt;
+&lt;h3&gt;Outstanding tasks:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; Allow searching posts by tag&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;
+&lt;p&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; Create a nav bar&lt;/p&gt;
+&lt;ul&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; Add a button to toggle light / dark mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; Clear unused CSS&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; Transfer existing React projects as a sub domain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Completed Tasks:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; Dark theme.&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; Move blog posts under different categories: programming, language, music&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item></channel></rss>
