@@ -6,6 +6,8 @@ html {
   box-sizing: border-box;
 }
 
+
+
 *,
 *:before,
 *:after {
@@ -28,7 +30,6 @@ body {
   font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -187,15 +188,13 @@ table {
   width: 100%;
   margin: 40px 0;
   border-radius: 5px;
+  empty-cells: hide;
 }
 
 table, th, td {
   border: 1px solid var(--light-color);
   padding: 10px;
-
-  /*.dark-theme & {*/
-    border-color: var(--dark-color);
-  /*}*/
+  border-color: var(--dark-color);
 }
 
 th {
@@ -204,6 +203,10 @@ th {
   /*.dark-theme & {*/
     background: var(--dark-background-secondary);
   /*}*/
+}
+
+table {
+    empty-cells: hide;
 }
 
 ul, ol {
@@ -320,4 +323,14 @@ footer {
       }
     }
   }
+}
+
+/* Only for 'key/value' pairs */
+td.key {
+  background-color: var(--dark-background-tertiary);
+  text-align: right
+}
+td.value {
+  text-align: left;
+  max-width:100%
 }
