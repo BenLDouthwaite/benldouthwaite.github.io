@@ -24,3 +24,4 @@ The site is built using gatsby, hosted on Github pages, using Amazon Route 53 fo
 - [x] Dark theme.
 - [x] Move blog posts under different categories: programming, language, music
 - [x] Wider pages
+- [x] Japanese font appears bolded, harder to read. should remove
