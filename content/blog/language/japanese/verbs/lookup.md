@@ -17,6 +17,7 @@ description: "Verb guide"
 |帰る|かえる|to return|u|not a 'ru' verb|
 |する|する|to do|irr|Can form complex verbs, after nouns|
 |くる|くる|to come|irr||
+|買う|かう|to buy||
 
 <!---
 ||||||

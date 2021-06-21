@@ -44,3 +44,26 @@ description: ""
 |六時にうちに帰ります。|(I) go home at 6:00|
 |七時半に晩ご飯食べます。|(I) eat dinner at 7:30|
 |十一時半に寝ます。|(I) go to bed at 11:30|
+|マクドナルドはどこですか。|Where is McDonald's.|
+|マクドナルドはあそこです|McDonald's is over there.|
+|マクドナルドはそこです|McDonald's is there (near listener).|
+|マクドナルドはここです|McDonald's is here (near speaker).|
+|あそこにマクドナルドがあります|There's a McDonald's over there.|
+|テレビがありません|I don't have a TV.|
+|時間がありますか|Do you have time?|
+|火曜日にテストがあります。|There will be a test on Tuesday.|
+|明日は日本語のクラスがありません。|There will be no Japanese class tomorrow.|
+|あそこに留学生がいます。|There's an international student over there.|
+|日本人の友だちがいます。|I have a Japanese friend.|
+|銀行は図書館のとなりです。|The bank is next to the library|
+|山下先生はさくらだいがくの学生でした。|Mr Yamashita was a student at Sakura University.|
+|あれは日本の映画じゃなかっです。|That was not a Japanese movie.|
+|メアリーさんは九時ごろうちに帰りました。|Mary returned home at about nine.|
+|私はきのう日本語を勉強しませんでした。|I did not study Japanese yesterday.|
+|これ、いくらですか。|How much is this?|
+|メアリーさんはそこでたけしさんを一時間まちました。|Mary waited for Takeshi for an hour.|
+|私はきのう日本語を三時間ぐらい勉強しました。|I studied Japanese for about 3 hours yesterday.|
+|きのう七時間半寝ました。|I slept for about 7 hours last night.|
+|日本語と英語を話します。|(I) speak Japanese and English.|
+|京都と大阪に行きました。|(I) went to Kyoto and Osaka|
+|メアリーさんはソラさんと韓国行きます。|Mary and Sora will go to Korea.|

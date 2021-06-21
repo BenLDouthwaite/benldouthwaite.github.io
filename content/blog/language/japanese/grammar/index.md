@@ -1,10 +1,9 @@
 ---
 title: "Japanese : Grammar Notes"
-date: "2021-05-04T15:55:00.000Z"
+date: "2021-05-16T15:55:00.000Z"
 description: ""
 ---
-
-### Grammar Notes
+### Tenses
 
 * Japanese has 2 tenses. Past and non-past.
     * Japanese uses the same tense for present and future
@@ -40,9 +39,64 @@ description: ""
 * ぜんぜん<sup>*</sup> : Never / Not at all.
 * あまり<sup>*</sup> : Not often / Not much at all.
 
-<sup>*</sup> <i>Infrequency</i> adverbs much connect with verbs conjugated in the negative (~ません)
+<sup>*</sup> <i>Infrequency</i> adverbs must connect with verbs conjugated in the negative (~ません)
   
 ### Word order.
 
 Word order is fairly flexible, generally several noun-particle pairs followed by a verb or adjective.
+
+### があります・います
+
+* あります: For non-living things.
+  * Can mean 'to have' or 'to own'
+  * Can be used to say an event will take place
+* います: For people and living things.
+  * Can mean to have friends, siblings etc
+* Both use the 'が' particle (instead of は)
+* Location typically uses に　(instead of で)
+* Typically, place first, location second.
+
+### Past tense of です。
+
+|です|affirmative|negative|
+|---|---|---|
+|present|~です|~じゃないです|
+|past|~でした|~じゃなかったです|
+
+* longer formal form of negative exists: ~じゃありませんでした
+
+### Past Tense of Verbs
+
+|Verbs|affirmative|negative|
+|---|---|---|
+|present|~ます|~ません|
+|past|~ました|~ませんでした|
+
+### も　(same activities)
+
+* **は・が・を　-> も**
+* **に・で・etc -> にも・でも**
+  
+* 私はきのう京都にいきました。: I went to Kyoto yesterday.
+* 山下先生もきのう京都にいきました : Professor Yamashita went to Kyoto yesterday, too.
+
+* 靴をかいました : (I) bought shoes.
+* かばんもかいました : (I) bought a bag, too.
+
+は and を can be replaced with も.
+With other particles such as に and で, keep them and follow up with も.
+
+* 先週京都にいきました。 : (I) went to Kyoto last week.
+* 大阪にもいきました。　: (I) went to Osaka, too.
+
+* うちで本を読みました。 : (I) read a book at home.
+* カフェでも本をよみました。: (I) read a book at a cafe, too.
+
+### と　。　Connections nouns / With
+
+と has 2 functions, 'and' for 2 nouns, or 'with' i.e with whom you do something.
+* 日本語と英語を話します。
+* 京都と大阪に行きました。
+* メアリーさんはソラさんと韓国行きます。
+
 

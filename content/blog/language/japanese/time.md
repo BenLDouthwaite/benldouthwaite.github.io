@@ -15,8 +15,22 @@ description: ""
 
 ### Relative Time
 
-* today : 今日
+* today : 今日 (きょう)
 * tomorrow : 明日
 * yesterday : 昨日 (きのう)
 * morning : 朝
 * tonight : 今晩
+
+### 一時間　。 Duration of activities
+
+Duration of an activity is expressed with 一時間, with no particle
+* メアリーさんはそこでたけしさんを一時間まちました。 
+
+For approximate time, use ぐらい
+* 私はきのう日本語を三時間ぐらい勉強しました。
+
+To add half an hour, add 半
+* きのう七時間半寝ました。
+
+If using 半 and ぐらい, 半 comes first.
+* 〜一時間半ぐらい。
