@@ -99,4 +99,8 @@ With other particles such as に and で, keep them and follow up with も.
 * 京都と大阪に行きました。
 * メアリーさんはソラさんと韓国行きます。
 
+### 〜て　もいいですか　。　May I ~
+
+　
+
 

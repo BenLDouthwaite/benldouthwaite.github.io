@@ -34,3 +34,31 @@ Verbs are categorised into 3 groups: ru-, u-, irregular
 ||||
 
 1. 帰る is an 'u' verb. Keep the 'r' sound when conjugating
+
+### て　 Form
+
+* All verbs in 1 sentence should be て form, except the last one.
+* list multiple actions in a sentence.
+
+1. Follow Rule sheet:
+    * い・ち・り　ー＞　〜って
+    * み・び・に　ー＞　〜んて
+    * き　　　　　ー＞　〜いて
+    * ぎ　　　　　ー＞　〜いで
+    * し　　　　　ー＞　〜して
+2. ~Ru verbs : Drop 'ます' and add 'て'
+3. Irregular - Have to memorise
+
+|日本語|て　Ｆorm |
+|---|---|
+|Type 1||
+|飲む（のむ）|のんで|
+|会う（あう）|あって|
+|Type 2||
+|食べる（たべる）|食べて|
+|借りる（かりる）|借りて|
+|見る（みる）|見て|
+|Type 3||
+|する|して|
+|行く（いく）|いって|
+|来る（くる）|来て（きて）|

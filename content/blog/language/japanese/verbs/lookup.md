@@ -3,21 +3,30 @@ title: "Japanese : Verb Lookup"
 date: "2021-05-08T13:25:00.000Z"
 description: "Verb guide"
 ---
-|Kanji|Hiragana|English|Category|Notes|
+|English|Kanji|Hiragana|Category|Notes|
 |---|---|---|---|---|
-|食べる|たべる|to eat|ru||
-|寝る|ねる|to sleep|ru||
-|起きる|おきる|to get up|ru||
-|見る|みる|to see|ru||
-|飲む|のむ|to drink|u||
-|読む|よむ|to read|u||
-|話す|はなす|to speak|u||
-|聞く|きく|to listen / hear|u||
-|行く|いく|to go|u||
-|帰る|かえる|to return|u|not a 'ru' verb|
-|する|する|to do|irr|Can form complex verbs, after nouns|
-|くる|くる|to come|irr||
-|買う|かう|to buy||
+|to borrow|借りる|かります||
+|to buy|買う|かう||
+|to come|くる|くる|irr||
+|to enter / come in|入る|はいる||
+|to eat|食べる|たべる|ru||
+|to drink|飲む|のむ|u||
+|to do|する|する|irr|Can form complex verbs, after nouns|
+|to get up|起きる|おきる|ru||
+|to go|行く|いく|u||
+|to listen / hear|聞く|きく|u||
+|to read|読む|よむ|u||
+|to receive|貰う|もらう|
+|to return|帰る|かえる|u|not a 'ru' verb|
+|to see|見る|みる|ru||
+|to see / meet|会う|あう||
+|to sit|座る|すわる|
+|to sleep|寝る|ねる|ru||
+|to speak|話す|はなす|u||
+|to use|使う|つかう||
+|to write|書く|かく||
+||||
+||||
 
 <!---
 ||||||
