@@ -1,0 +1,2 @@
+(self.webpackChunkbendouthwaite_com=self.webpackChunkbendouthwaite_com||[]).push([[170],{6251:function(e,t,a){"use strict";a.r(t);var n=a(7294),l=(a(5444),a(5127));t.default=function(e){var t,a=e.data,i=e.location,o=(null===(t=a.site.siteMetadata)||void 0===t?void 0:t.title)||"Title";a.allMarkdownRemark.nodes;return n.createElement(l.Z,{location:i,title:o},n.createElement("h1",null,"React"))}}}]);
+//# sourceMappingURL=component---src-pages-programming-react-js-4400efb6984baf2cd77c.js.map
