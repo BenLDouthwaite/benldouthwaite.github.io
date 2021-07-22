@@ -3,7 +3,8 @@ title: "Japanese : Index"
 date: "2021-05-03T15:55:00.000Z"
 description: "Index of other lessons"
 ---
-### Index: 
+
+### Index:
 
 // TODO, Should be able to generate this using GraphQL
 

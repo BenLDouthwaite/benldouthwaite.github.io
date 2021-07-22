@@ -3,7 +3,7 @@ module.exports = {
     title: `BLD`,
     author: {
       name: `Ben Douthwaite`,
-      summary: `London based programmer, and amateur linguist / musician`,
+      summary: `London based programmer, and amateur linguist`,
     },
     description: `Home for programming, linguistics and music notes.`,
     siteUrl: `https://bendouthwaite.com`,

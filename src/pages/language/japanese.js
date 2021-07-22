@@ -1,31 +1,21 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../../components/layout"
 
-const BlogIndex = ({ data, location }) => {
+const JapaneseIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
+  console.log(posts)
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <h1>Japanese</h1>
+      <p>
+        Want to add query to link out to sub pages below. Below examples use
+        tags with GraphQL
+      </p>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -43,26 +33,23 @@ const BlogIndex = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
+                  {false && <small>{post.frontmatter.date}</small>}
                 </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
               </article>
             </li>
           )
         })}
       </ol>
+
+      <p>
+        How to do using slug prefix / regex? Seems to be the wrong design. I
+        want a hierarchical layout, if easy
+      </p>
     </Layout>
   )
 }
 
-export default BlogIndex
+export default JapaneseIndex
 
 export const pageQuery = graphql`
   query {
@@ -71,7 +58,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: { in: "japanese" } } }
+    ) {
       nodes {
         excerpt
         fields {

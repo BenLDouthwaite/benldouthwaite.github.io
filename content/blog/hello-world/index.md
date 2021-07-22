@@ -14,4 +14,4 @@ While this is my personal site, content will primarily cover:
 - Language study
 - Music
 
-Above all else, the goal is brevity and simplicity. Given that, this seems like sufficient introduction.
+Above all else, the goal is brevity and simplicity.
