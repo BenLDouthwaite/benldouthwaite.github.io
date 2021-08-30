@@ -10,6 +10,15 @@ Built using gatsby, hosted on Github pages, using Amazon Route 53 for the domain
 
 ### Outstanding tasks:
 
+- [ ] Home page design.
+  - [ ] Either light mode, or toggle from light to dark.
+  - [ ] Links to: Projects, Blog, Notes
+    - [ ] Projects link out to github, have summary and link to blog post / notes from development.
+    - [ ] Blog have effort in writing. Separate folder from Notes.
+    - [ ] Notes are for me, to reference./ when studying.
+  - [ ] Footer. 
+  - [ ] Contact links, LinkedIn / Github.
+
 - [ ] Home page links to categories pages
   - [ ] First just link out to Japanese notes in an organised way
 - [ ] Can I remove the date in frontmatter, or automate it?
@@ -24,6 +33,10 @@ Built using gatsby, hosted on Github pages, using Amazon Route 53 for the domain
 - [ ] Transfer existing React projects as a sub domain
 - [ ] Create / Update favicon.
 
+### Projects to reference for ideas:
+
+- https://github.com/smakosh/smakosh.com
+- 
 ### Completed Tasks:
 
 - [x] Dark theme.

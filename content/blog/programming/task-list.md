@@ -10,7 +10,10 @@ Ideally, I can keep this ordered, to pick from the top of the list when I have t
 ## Technologies
 
 - [ ] Gatsby
+  - [ ] Connecting up with Cloud functions.
+  - [ ] https://haseebmajid.dev/blog/toc-in-gatsby - Table of contents 
 - [ ] GraphQL - Feeds into Gatsby
+  - https://www.howtographql.com/
 - [ ] Node
 - [ ] React
   - [ ] React Native, bought a course at one point. Could be fun.
@@ -20,7 +23,11 @@ Ideally, I can keep this ordered, to pick from the top of the list when I have t
 - [ ] GCP
   - [ ] Research if there's a certification, or structured training course.
 - [ ] CSS
+  - [ ] SCSS
   - It's been a weak point for a long time.
+- [ ] Java 
+  - Memory model
+    - stop-the-world events.
 
 ## Concepts
 
