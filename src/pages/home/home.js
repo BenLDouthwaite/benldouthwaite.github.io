@@ -1,16 +1,12 @@
-import { Button } from "bootstrap";
 import { Link } from "gatsby";
 import * as React from "react"
-import { Card, Col, Container, Row } from "react-bootstrap";
-import TestCard from "../../components/test-card";
+import { Col, Container, Row } from "react-bootstrap";
 
 const Home = () => {
 
-  console.log('Home - Load');
-
   return (
     <>
-      <h1>Home Page. Hello</h1>
+      <h1>Home Page</h1>
       <Container>
         <Row>
           {/* Projects to be added once I can link through to some */}
@@ -24,10 +20,9 @@ const Home = () => {
             <h2>Blog</h2>
           </Col>
         </Row>
+        <hr />
       </Container>
-      
-      <TestCard />
-      
+            
       <h2>Blog</h2>
       <h3>Twitter Link</h3>
       <h3>Github Link</h3>

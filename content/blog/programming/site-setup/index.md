@@ -10,6 +10,9 @@ Built using gatsby, hosted on Github pages, using Amazon Route 53 for the domain
 
 ### Outstanding tasks:
 
+- [ ] Update page creation to tidy running for both Markdown and MDX
+- [ ] Enable and extract MDXProvider to pass components
+  - https://dev.to/adamgoth/building-a-blog-with-gatsby-and-mdx-2eh9
 - [ ] Home page design.
   - [ ] Either light mode, or toggle from light to dark.
   - [ ] Links to: Projects, Blog, Notes

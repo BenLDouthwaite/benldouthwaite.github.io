@@ -1,14 +1,9 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../../components/layout"
 
 const JapaneseIndex = ({ data, location }) => {
-
-  console.log('Japanese index page data', data)
-
-//  const siteTitle = data.site.siteMetadata?.title || `Title`
-//  const posts = data.allMarkdownRemark.nodes
 
   return (
     <Layout location={location}>

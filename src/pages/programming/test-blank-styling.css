@@ -1,0 +1,10 @@
+/* Can simply override the global styling if needed. */
+
+/* Need to make it to the ID of the page? */
+body {
+    /* background-color: white; */
+}
+
+h1 {
+    /* color: black */
+}
