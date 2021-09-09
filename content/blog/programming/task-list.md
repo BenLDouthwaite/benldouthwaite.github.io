@@ -11,7 +11,7 @@ Ideally, I can keep this ordered, to pick from the top of the list when I have t
 
 - [ ] Gatsby
   - [ ] Connecting up with Cloud functions.
-  - [ ] https://haseebmajid.dev/blog/toc-in-gatsby - Table of contents 
+  - [ ] https://haseebmajid.dev/blog/toc-in-gatsby - Table of contents
 - [ ] GraphQL - Feeds into Gatsby
   - https://www.howtographql.com/
 - [ ] Node
@@ -25,7 +25,7 @@ Ideally, I can keep this ordered, to pick from the top of the list when I have t
 - [ ] CSS
   - [ ] SCSS
   - It's been a weak point for a long time.
-- [ ] Java 
+- [ ] Java
   - Memory model
     - stop-the-world events.
 

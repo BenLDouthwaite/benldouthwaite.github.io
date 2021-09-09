@@ -25,9 +25,7 @@ module.exports = {
       },
     },
 
-
     `gatsby-plugin-mdx`,
-
 
     {
       resolve: `gatsby-transformer-remark`,

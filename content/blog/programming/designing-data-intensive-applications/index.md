@@ -14,4 +14,3 @@ description: ""
 # Part 1 : Foundations of Data Systems
 
 ## Chapter 1 : Reliable, Scalable and Maintainable Applications.
-

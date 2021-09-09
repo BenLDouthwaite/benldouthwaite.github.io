@@ -9,7 +9,7 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const markdownPosts = data.allMarkdownRemark.nodes
 
-  const mdxPosts = data.allMdx.nodes;
+  const mdxPosts = data.allMdx.nodes
 
   if (markdownPosts.length === 0) {
     return (
@@ -103,7 +103,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
         frontmatter {
           title

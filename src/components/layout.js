@@ -1,13 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { AiFillTwitterCircle } from "@react-icons/all-files/ai/AiFillTwitterCircle";
+import { AiFillTwitterCircle } from "@react-icons/all-files/ai/AiFillTwitterCircle"
 
 import Header from "./header"
 
 import "../styles/layout.css"
 
 const Layout = ({ location, title, children }) => {
-
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
@@ -30,9 +29,12 @@ const Layout = ({ location, title, children }) => {
       <Header header={header} />
       <main>{children}</main>
 
-
-      
-      <footer>© All rights reserved | {new Date().getFullYear()} | <a href="https://twitter.com/BenLDouthwaite"><AiFillTwitterCircle /></a></footer>
+      <footer>
+        © All rights reserved | {new Date().getFullYear()} |{" "}
+        <a href="https://twitter.com/BenLDouthwaite">
+          <AiFillTwitterCircle />
+        </a>
+      </footer>
     </div>
   )
 }

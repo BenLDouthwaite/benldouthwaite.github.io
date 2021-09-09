@@ -14,12 +14,13 @@ Built using gatsby, hosted on Github pages, using Amazon Route 53 for the domain
 - [ ] Enable and extract MDXProvider to pass components
   - https://dev.to/adamgoth/building-a-blog-with-gatsby-and-mdx-2eh9
 - [ ] Home page design.
+
   - [ ] Either light mode, or toggle from light to dark.
   - [ ] Links to: Projects, Blog, Notes
     - [ ] Projects link out to github, have summary and link to blog post / notes from development.
     - [ ] Blog have effort in writing. Separate folder from Notes.
     - [ ] Notes are for me, to reference./ when studying.
-  - [ ] Footer. 
+  - [ ] Footer.
   - [ ] Contact links, LinkedIn / Github.
 
 - [ ] Home page links to categories pages
@@ -39,7 +40,8 @@ Built using gatsby, hosted on Github pages, using Amazon Route 53 for the domain
 ### Projects to reference for ideas:
 
 - https://github.com/smakosh/smakosh.com
-- 
+-
+
 ### Completed Tasks:
 
 - [x] Dark theme.

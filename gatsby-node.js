@@ -27,7 +27,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const mdxPosts = mdxResult.data.allMdx.nodes
 
   // call `createPage` for each result
-  mdxPosts.forEach((node , index) => {
+  mdxPosts.forEach((node, index) => {
     createPage({
       path: node.slug,
       component: mdxBlogPost,
@@ -36,7 +36,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: { id: node.id },
     })
   })
-
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)

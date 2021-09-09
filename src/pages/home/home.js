@@ -1,9 +1,8 @@
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 import * as React from "react"
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap"
 
 const Home = () => {
-
   return (
     <>
       <h1>Home Page</h1>
@@ -14,7 +13,9 @@ const Home = () => {
             <h2>Projects</h2>
           </Col> */}
           <Col>
-            <h2><Link to="/notes">Notes</Link></h2>
+            <h2>
+              <Link to="/notes">Notes</Link>
+            </h2>
           </Col>
           <Col>
             <h2>Blog</h2>
@@ -22,7 +23,7 @@ const Home = () => {
         </Row>
         <hr />
       </Container>
-            
+
       <h2>Blog</h2>
       <h3>Twitter Link</h3>
       <h3>Github Link</h3>
@@ -32,4 +33,3 @@ const Home = () => {
 }
 
 export default Home
-

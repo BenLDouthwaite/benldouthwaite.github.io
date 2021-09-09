@@ -10,7 +10,7 @@ const Index = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Home/>
+      <Home />
     </Layout>
   )
 }

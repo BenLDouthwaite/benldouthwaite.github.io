@@ -9,10 +9,12 @@ description: ""
 GraphQl
 
 TODO Why are quotes rendered so big? Clear the CSS
+
 > To pull data into a “building block” component, use the useStaticQuery hook.
 > To pull data into a page component, use a page query.
 
 - `gatsby-config.js`
+
   - Contains `siteMetadata`.
     - Pulled into data layer automatically.
   - Configures `gatsby-source-filesystem`

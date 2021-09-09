@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import Layout from "../../components/layout"
 
 const JapaneseIndex = ({ data, location }) => {
-
   return (
     <Layout location={location}>
       <h1>Japanese</h1>
@@ -27,17 +26,17 @@ export default JapaneseIndex
 // TODO How to get 'startsWith' instead of 'eq' to get all files together.
 export const pageQuery = graphql`
   query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-      allFile(filter: {relativeDirectory: {eq: "language/japanese"}}) {
-        nodes {
-          name
-          relativeDirectory
-          relativePath
-        }
+    site {
+      siteMetadata {
+        title
       }
     }
+    allFile(filter: { relativeDirectory: { eq: "language/japanese" } }) {
+      nodes {
+        name
+        relativeDirectory
+        relativePath
+      }
+    }
+  }
 `

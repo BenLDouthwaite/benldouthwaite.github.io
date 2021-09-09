@@ -4,7 +4,7 @@ date: "2021-08-08T12:26:00.000Z"
 description: ""
 ---
 
-### Phrase translations. 
+### Phrase translations.
 
 去年日本にいきました。: I went to Japan last year.
 
@@ -17,7 +17,7 @@ description: ""
 
 京都は大好きでした。: I loved Kyoto.
 多い古いお寺にいきました。: I went to many old temples.
-金閣寺は忙しすぎました。でも銀閣寺は美しくて長閑でした  : Kinkakuji was too busy, but Ginkakuji was beautiful and peaceful. 
+金閣寺は忙しすぎました。でも銀閣寺は美しくて長閑でした : Kinkakuji was too busy, but Ginkakuji was beautiful and peaceful.
 
 日本語はとても難しかったです。: Japanese was very difficult.
 でも日本人は親切で忍耐強かったです。: But Japanese people were kind and patient.
@@ -26,7 +26,7 @@ description: ""
 
 ### New grammar points
 
-- 〜のに　
+- 〜のに
 - 〜とき
 
 ### Finished content

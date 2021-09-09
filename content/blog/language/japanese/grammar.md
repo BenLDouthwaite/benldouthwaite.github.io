@@ -30,13 +30,13 @@ tags: ["japanese"]
 - エンジニアじゃありません : I'm not an engineer.
 - 会社員でうか : Are you a company worker?
 
-### ~ が 好き(すき) です。　I like ~. / ~  
+### ~ が 好き(すき) です。　 I like ~. / ~
 
 - 音楽が好きです。: (I) like music
 - カラオケが好きじゃありません : (I) don't like karaoke
 - 日本料理は好きですか : Do you like Japanese food?
 
-### ~ があります・ ~ います。　There is ~.
+### ~ があります・ ~ います。　 There is ~.
 
 - あります: For non-living things.
   - Can mean 'to have' or 'to own'
@@ -53,7 +53,7 @@ tags: ["japanese"]
 
 - トイレどこですか。: Where is the toilet?
 
-### ~ にいきたいんですか。　I'm trying to get to ~.
+### ~ にいきたいんですか。　 I'm trying to get to ~.
 
 - 郵便局にいきたいんですか。。。　: I'm trying to get to the post office...
 
@@ -125,7 +125,7 @@ With other particles such as に and で, keep them and follow up with も.
 
 - カードでいいですか。: Can I pay by credit card
 
-### 〜で。　Choosing from a series of options.
+### 〜で。　 Choosing from a series of options.
 
 - 持ち帰りで。: Take out please.
 
@@ -149,4 +149,3 @@ With other particles such as に and で, keep them and follow up with も.
 ### すぎる　: too much
 
 ### とき : when (past events)
-
