@@ -57,7 +57,6 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-
 }
 
 /* HTML elements */
@@ -118,7 +117,9 @@ h6 {
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  /* color: var(--color-heading-black); */
+  color: var(--color-heading);
+  /* color: red; */
 }
 
 h2 {

@@ -1,7 +1,7 @@
 @import "./fonts.css";
 @import "./variables.css";
 @import "./prism.css";
-@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 html {
   box-sizing: border-box;
@@ -16,12 +16,18 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
+  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Roboto",
+    "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   /* font-weight: 600; */
   line-height: 1.54;
 
+  /* TODO Play around this later */
+  /* background: linear-gradient(rgba(255, 255, 255, 0.5), transparent); */
   background-color: var(--dark-background);
+
+  /* this your primary color */
+
   color: var(--dark-color);
 
   text-rendering: optimizeLegibility;
@@ -31,7 +37,12 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   display: flex;
   align-items: center;
   line-height: 1.3;
@@ -114,7 +125,7 @@ figure {
   figcaption {
     font-size: 14px;
     margin-top: 5px;
-    opacity: .8;
+    opacity: 0.8;
 
     &.left {
       text-align: left;
@@ -138,14 +149,14 @@ code {
   padding: 1px 6px;
   margin: 0 2px;
   border-radius: 5px;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 pre {
   background: #1a1a1d;
   padding: 20px;
   border-radius: 8px;
-  font-size: .9rem;
+  font-size: 0.9rem;
   overflow: auto;
 
   @media (--phone) {
@@ -158,7 +169,7 @@ pre {
     color: #ccc;
     margin: 0;
     padding: 0;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -190,7 +201,9 @@ table {
   empty-cells: hide;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid var(--light-color);
   padding: 10px;
   border-color: var(--dark-color);
@@ -200,15 +213,16 @@ th {
   background: var(--light-background-secondary);
 
   /*.dark-theme & {*/
-    background: var(--dark-background-secondary);
+  background: var(--dark-background-secondary);
   /*}*/
 }
 
 table {
-    empty-cells: hide;
+  empty-cells: hide;
 }
 
-ul, ol {
+ul,
+ol {
   margin-left: 40px;
   padding: 0;
 
@@ -221,15 +235,18 @@ ol ol {
   list-style-type: lower-alpha;
 }
 
-button, input, textarea {
-  font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
+button,
+input,
+textarea {
+  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Roboto",
+    "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .content {
@@ -240,7 +257,7 @@ button, input, textarea {
   justify-content: center;
   margin: 50px auto;
   width: 100%;
-  max-width: 800px;;
+  max-width: 800px;
 
   @media (--phone) {
     margin-top: 0;
@@ -258,7 +275,7 @@ hr {
   height: 1px;
 
   /*.dark-theme & {*/
-    background: var(--dark-border-color);
+  background: var(--dark-border-color);
   /*}*/
 }
 
@@ -271,7 +288,7 @@ hr {
   background: var(--light-background-secondary);
 
   /*.dark-theme & {*/
-    background: var(--dark-background-secondary);
+  background: var(--dark-background-secondary);
   /*}*/
 
   span {
@@ -324,12 +341,16 @@ footer {
   }
 }
 
+footer a {
+  margin: 5px;
+}
+
 /* Only for 'key/value' pairs */
 td.key {
   background-color: var(--dark-background-tertiary);
-  text-align: right
+  text-align: right;
 }
 td.value {
   text-align: left;
-  max-width:100%
+  max-width: 100%;
 }

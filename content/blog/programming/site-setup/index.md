@@ -20,8 +20,8 @@ Built using gatsby, hosted on Github pages, using Amazon Route 53 for the domain
     - [ ] Projects link out to github, have summary and link to blog post / notes from development.
     - [ ] Blog have effort in writing. Separate folder from Notes.
     - [ ] Notes are for me, to reference./ when studying.
-  - [ ] Footer.
-  - [ ] Contact links, LinkedIn / Github.
+  - [x] Footer.
+  - [x] Contact links, LinkedIn / Github.
 
 - [ ] Home page links to categories pages
   - [ ] First just link out to Japanese notes in an organised way

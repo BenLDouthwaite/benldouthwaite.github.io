@@ -1,7 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { AiFillTwitterCircle } from "@react-icons/all-files/ai/AiFillTwitterCircle"
-
+import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub"
+import { AiFillLinkedin } from "@react-icons/all-files/ai/AiFillLinkedin"
 import Header from "./header"
 
 import "../styles/layout.css"
@@ -33,6 +34,12 @@ const Layout = ({ location, title, children }) => {
         © All rights reserved | {new Date().getFullYear()} |{" "}
         <a href="https://twitter.com/BenLDouthwaite">
           <AiFillTwitterCircle />
+        </a>
+        <a href="https://github.com/BenLDouthwaite">
+          <AiFillGithub />
+        </a>
+        <a href="https://www.linkedin.com/in/ben-douthwaite/">
+          <AiFillLinkedin />
         </a>
       </footer>
     </div>
