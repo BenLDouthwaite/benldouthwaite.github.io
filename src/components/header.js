@@ -25,22 +25,22 @@ const Header = props => {
             <Nav className="me-auto" className="justify-content-end">
               <Nav.Link>
                 <Link to={`/blog`} style={{ textDecoration: "none" }}>
-                  <span itemProp="headline">Blog</span>
+                  Blog
                 </Link>
               </Nav.Link>
               <Nav.Link>
                 <Link to={`/projects`} style={{ textDecoration: "none" }}>
-                  <span itemProp="headline">Projects</span>
+                  Projects
                 </Link>
               </Nav.Link>
               <Nav.Link>
                 <Link to={`/tools`} style={{ textDecoration: "none" }}>
-                  <span itemProp="headline">Tools</span>
+                  Tools
                 </Link>
               </Nav.Link>
               <Nav.Link>
                 <Link to={`/notes`} style={{ textDecoration: "none" }}>
-                  <span itemProp="headline">Notes</span>
+                  Notes
                 </Link>
               </Nav.Link>
             </Nav>
