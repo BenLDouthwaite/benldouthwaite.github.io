@@ -1,0 +1,2 @@
+(self.webpackChunkbendouthwaite_com=self.webpackChunkbendouthwaite_com||[]).push([[626],{4252:function(e,t,a){"use strict";a.r(t);var l=a(7294),n=a(5118);t.default=function(e){var t,a=e.data,i=e.location,o=(null===(t=a.site.siteMetadata)||void 0===t?void 0:t.title)||"Title";return l.createElement(n.Z,{location:i,title:o},l.createElement("p",null,"New Page Template"))}}}]);
+//# sourceMappingURL=component---src-pages-page-template-index-js-6441de424275b0e0ae9b.js.map

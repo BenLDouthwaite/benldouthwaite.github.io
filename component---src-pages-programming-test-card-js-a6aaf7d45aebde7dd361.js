@@ -1,0 +1,2 @@
+(self.webpackChunkbendouthwaite_com=self.webpackChunkbendouthwaite_com||[]).push([[192],{2870:function(e,t,n){"use strict";n.r(t);var l=n(7294),u=n(2405);t.default=function(){return l.createElement(u.Z,{style:{width:"18rem"}},l.createElement(u.Z.Body,null,l.createElement(u.Z.Title,null,"My Card Title"),l.createElement(u.Z.Text,null,"My Card Content")))}}}]);
+//# sourceMappingURL=component---src-pages-programming-test-card-js-a6aaf7d45aebde7dd361.js.map
