@@ -341,6 +341,10 @@ footer {
   }
 }
 
+.justify-content-end a {
+  margin: 5px;
+}
+
 footer a {
   margin: 5px;
 }
