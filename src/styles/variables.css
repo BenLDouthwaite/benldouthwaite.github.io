@@ -7,7 +7,8 @@
   --light-border-color: #dcdcdc;
 
   /* dark theme colors */
-  --dark-background: #292a2d;
+  --dark-background: #191a3d; /* Slightly bluer hue, less gray */
+  /* --dark-background: #292a2d; */
   --dark-background-secondary: #3b3d42;
   --dark-background-tertiary: #303033;
   --dark-color: #a9a9b3;

@@ -1,51 +1,74 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
-import { Container, Nav, Navbar, NavDropdown, Row } from "react-bootstrap"
+import { Nav, Navbar, Button } from "react-bootstrap"
 import { Helmet } from "react-helmet"
 
 const Header = props => {
-  const { header } = props
+  const { header, defaultTheme } = props
+
+  const defaultThemeState =
+    (typeof window !== "undefined" && window.localStorage.getItem("theme")) ||
+    null
+  const [userTheme, changeTheme] = useState(defaultThemeState)
+  const [isMobileMenuVisible, toggleMobileMenu] = useState(false)
+  const [isSubMenuVisible, toggleSubMenu] = useState(false)
+
+  const onChangeTheme = () => {
+    const opositeTheme =
+      (userTheme || defaultTheme) === "light" ? "dark" : "light"
+
+    changeTheme(opositeTheme)
+
+    typeof window !== "undefined" &&
+      window.localStorage.setItem("theme", opositeTheme)
+  }
+
+  const handleClick = () => {
+    onChangeTheme()
+  }
 
   return (
     <>
       <Helmet>
-        <body />
+        <body
+          className={
+            (userTheme || defaultTheme) === "light"
+              ? "light-theme"
+              : "dark-theme"
+          }
+        />
       </Helmet>
       <header>
         <Navbar variant="dark" expand="sm">
-          <Navbar.Brand href="/">
+          {/* TODO This is causing error in the console relating to nested a tags */}
+          {/* <Navbar.Brand href="/">
             <div className="global-header">{header}</div>
-          </Navbar.Brand>
+          </Navbar.Brand> */}
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
             className="justify-content-end"
           >
             <Nav className="me-auto" className="justify-content-end">
-              {/* <Nav.Link> */}
               <Link to={`/blog`} style={{ textDecoration: "none" }}>
                 Blog
               </Link>
-              {/* </Nav.Link> */}
-
-              {/* <Nav.Link> */}
               <Link to={`/projects`} style={{ textDecoration: "none" }}>
                 Projects
               </Link>
-              {/* </Nav.Link> */}
-
-              {/* <Nav.Link> */}
               <Link to={`/tools`} style={{ textDecoration: "none" }}>
                 Tools
               </Link>
-              {/* </Nav.Link> */}
-
-              {/* <Nav.Link> */}
-              <Link to={`/notes`} style={{ textDecoration: "none" }}>
+              <Link
+                to={`/notes`}
+                style={{ textDecoration: "none" }}
+                activeStyle={{ color: "red" }}
+              >
                 Notes
               </Link>
-              {/* </Nav.Link> */}
+              <Button onClick={handleClick} />
             </Nav>
           </Navbar.Collapse>
         </Navbar>

@@ -1,17 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Layout from "../../components/layout"
 import { Col, Container, Row } from "react-bootstrap"
-import {
-  BarChart,
-  Bar,
-  Cell,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts"
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts"
 
 const ReactIndex = ({ location }) => {
   const [initialBalance, setInitialBalance] = useState("")

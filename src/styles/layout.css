@@ -19,22 +19,36 @@ body {
   font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Roboto",
     "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  /* font-weight: 600; */
   line-height: 1.54;
 
-  /* TODO Play around this later */
-  /* background: linear-gradient(rgba(255, 255, 255, 0.5), transparent); */
-  background-color: var(--dark-background);
-
-  /* this your primary color */
-
-  color: var(--dark-color);
+  background-color: var(--light-background);
+  color: var(--light-color);
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
+
+  /* .dark-theme & {
+    background-color: var(--dark-background);
+    color: var(--dark-color);
+  }
+
+  &.dark-theme {
+    background-color: var(--dark-background);
+    color: var(--dark-color);
+  } */
+
+  /* .dark-theme {
+    background-color: var(--dark-background);
+    color: var(--dark-color);
+  } */
+}
+
+.dark-theme {
+  background-color: var(--dark-background);
+  color: var(--dark-color);
 }
 
 h1,
@@ -212,9 +226,9 @@ td {
 th {
   background: var(--light-background-secondary);
 
-  /*.dark-theme & {*/
-  background: var(--dark-background-secondary);
-  /*}*/
+  .dark-theme & {
+    background: var(--dark-background-secondary);
+  }
 }
 
 table {
@@ -274,9 +288,9 @@ hr {
   background: var(--light-border-color);
   height: 1px;
 
-  /*.dark-theme & {*/
-  background: var(--dark-border-color);
-  /*}*/
+  .dark-theme & {
+    background: var(--dark-border-color);
+  }
 }
 
 .infoBanner {
@@ -287,9 +301,9 @@ hr {
   width: calc(100% - 40px);
   background: var(--light-background-secondary);
 
-  /*.dark-theme & {*/
-  background: var(--dark-background-secondary);
-  /*}*/
+  .dark-theme & {
+    background: var(--dark-background-secondary);
+  }
 
   span {
     font-weight: bold;

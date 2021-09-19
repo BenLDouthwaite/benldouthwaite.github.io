@@ -235,6 +235,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
+  color: var(--color-primary);
 }
 
 /* Custom classes */
