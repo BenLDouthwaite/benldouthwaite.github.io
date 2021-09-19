@@ -40,11 +40,12 @@ const Header = props => {
         />
       </Helmet>
       <header>
-        <Navbar variant="dark" expand="sm">
-          {/* TODO This is causing error in the console relating to nested a tags */}
-          {/* <Navbar.Brand href="/">
-            <div className="global-header">{header}</div>
-          </Navbar.Brand> */}
+        <Navbar expand="sm">
+          <Nav className="me-auto">
+            <Link to={`/`} style={{ textDecoration: "none" }}>
+              {header}
+            </Link>
+          </Nav>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
