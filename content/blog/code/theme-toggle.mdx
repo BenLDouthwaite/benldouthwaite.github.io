@@ -5,11 +5,21 @@ date: "2021-09-18"
 
 import ThemeTester from "../../../src/components/theme-tester"
 
+<ThemeTester />
+
+<hr />
+
 What steps did I take, to log before writing up fully later:
 
-- [ ] Decide on the color schemes / accent colours for light / dark mode
-- [ ] Build out a demo page, that shows all the components and styling.
+- [x] Decide on the first pass color schemes for light / dark mode
+  - Light: Plain white background with black text. Dark: Gray with blue hue, white / light gray text for fonts.
+- [x] Build out a demo page, that shows somes of the components and styling.
   - [ ] Can I make one that takes any 'children' as input, and renders a list of themes, either horizontally or vertically
-  - [ ] Can use gatsby 'hello-friend' as a reference
-
-<ThemeTester />
+  - [x] Can use gatsby 'hello-friend' as a reference
+- [x] Build a button on the nav bar, to toggle the applied themes.
+- [x] Apply global theme override for background and colours
+  - [ ] Need to figure out syntax to be applied for each sub components.
+- [ ] Possibly need to override the build to allow SASS for css pre-processing
+- [ ] On home page, fix on-hover colours and processing.
+- [ ] Fix table header highlighting
+- [ ] Review accent colours for the light / dark themes.

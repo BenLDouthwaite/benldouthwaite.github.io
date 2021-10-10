@@ -29,25 +29,10 @@ body {
   font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
-
-  /* .dark-theme & {
-    background-color: var(--dark-background);
-    color: var(--dark-color);
-  }
-
-  &.dark-theme {
-    background-color: var(--dark-background);
-    color: var(--dark-color);
-  } */
-
-  /* .dark-theme {
-    background-color: var(--dark-background);
-    color: var(--dark-color);
-  } */
 }
 
 .dark-theme {
-  background: linear-gradient(rgba(0, 0, 50, 0.5), transparent);
+  /* background: linear-gradient(rgba(0, 0, 50, 0.5), transparent); */
   background-color: var(--dark-background);
   color: var(--dark-color);
 }

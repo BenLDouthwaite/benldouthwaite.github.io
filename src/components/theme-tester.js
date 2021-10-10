@@ -8,13 +8,35 @@ const ThemeTester = props => {
       <Container>
         <Row>
           <Col className="light-theme">
-            <p>Some light mode content</p>
+            <TestContent />
           </Col>
           <Col className="dark-theme">
-            <p>Some dark mode content</p>
+            <TestContent />
           </Col>
         </Row>
       </Container>
+    </>
+  )
+}
+
+const TestContent = props => {
+  return (
+    <>
+      <p>Some dark mode content</p>
+      <table>
+        <tr>
+          <th>A</th>
+          <th>B</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+      </table>
     </>
   )
 }
