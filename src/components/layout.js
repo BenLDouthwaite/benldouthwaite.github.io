@@ -1,8 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { AiFillTwitterCircle } from "@react-icons/all-files/ai/AiFillTwitterCircle"
-import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub"
-import { AiFillLinkedin } from "@react-icons/all-files/ai/AiFillLinkedin"
+
+import {
+  AiFillTwitterCircle,
+  AiFillGithub,
+  AiFillLinkedin,
+} from "react-icons/ai"
 import Header from "./header"
 
 import "../styles/layout.css"

@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import { Nav, Navbar, Button } from "react-bootstrap"
 import { Helmet } from "react-helmet"
+import { BsSun, BsFillMoonFill } from "react-icons/bs"
 
 const Header = props => {
   const { header, defaultTheme } = props
@@ -69,7 +70,22 @@ const Header = props => {
               >
                 Notes
               </Link>
-              <Button onClick={handleClick} />
+              <button
+                onClick={handleClick}
+                style={{
+                  cursor: "pointer",
+                  "background-color": "transparent",
+                  "background-repeat": "no-repeat",
+                  border: "none",
+                  overflow: "hidden",
+                  outline: "none",
+                  margin: "5px",
+                  padding: "0px 15px 0px",
+                }}
+              >
+                {userTheme === "light" && <BsSun />}
+                {userTheme !== "light" && <BsFillMoonFill />}
+              </button>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
