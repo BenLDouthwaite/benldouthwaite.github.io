@@ -7,8 +7,22 @@ description: "General things I want to research."
 Things I'd like to research more, or would like to try a project with.
 Ideally, I can keep this ordered, to pick from the top of the list when I have time.
 
-## Block Post Ideas
+# Priority Task List
 
+- [ ] Any work that would not be professionally public facing, move to `reference` project
+- [ ] Any pages that are unfinished, or mock content, delete
+- [ ] Any dead links, delete
+- [ ] Clear task-list and site-setup to single document. Add ability to flag as 'draft' to not appear on the site.
+
+# Future improvement Ideas
+
+- [ ] Tools summary page
+- [ ] Calculator page needs the home page link in the nav bar
+  - [ ] Add default reasonable values
+
+## Blog Post Ideas
+
+- [ ] Spring Boot + Prometheus + Grafana in local k8s
 - [ ] Nginx + Prometheus + Grafana in local k8s
 
   - [ ] Enrich with Lua metrics
@@ -19,6 +33,14 @@ Ideally, I can keep this ordered, to pick from the top of the list when I have t
   - [ ] Auto-remove any completed tasks.
     - [ ] Remove subtasks from a parent task
     - [ ] Don't clear parent task unless all subtasks done.
+
+## Books
+
+- [ ] Cracking the coding Interview
+- [ ] Clean code - read years ago, but good to review
+- [ ] Designing data intensive applications
+- [ ] Working effectively with legacy code
+- Find a book for performance testing and improvements.
 
 ## Technologies
 

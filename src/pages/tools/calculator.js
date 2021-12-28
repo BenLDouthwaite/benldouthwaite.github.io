@@ -25,11 +25,11 @@ const ReactIndex = ({ location }) => {
 
     let currentBalance = initialBalance
     for (let i = 0; i <= years; i++) {
+      let formattedBalance = parseFloat(currentBalance).toFixed(2)
       data.push({
         name: i,
-        pv: currentBalance,
+        pv: formattedBalance,
       })
-      // TODO Trim to 2 decimal places
       currentBalance = currentBalance * rate
     }
     setData(data)

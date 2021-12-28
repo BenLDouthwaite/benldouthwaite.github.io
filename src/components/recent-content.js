@@ -4,20 +4,10 @@ import { Link } from "gatsby"
 const RecentContent = props => {
   const recentContentItems = [
     {
-      title: "Building a Gatsby light / dark mode toggle",
+      title: "GraphQL query for content sorted by date",
       summary:
-        "A tutorial / review of the process for building a toggle button for light and dark mode on this blog",
-      link: "/code/theme-toggle",
-    },
-    {
-      title: "My Post Title",
-      summary:
-        "A summary description of the post, that will give a little context to the work and ideally entice people to click the link",
-    },
-    {
-      title: "Writing a simple but effective web crawler",
-      summary:
-        "Notes from writing a crawler, with the task to find and dead links in my blog.",
+        "TODO Update this component to return content sorted by date, as per /notes",
+      link: "/notes",
     },
   ]
 
@@ -36,7 +26,6 @@ const RecentContentItem = props => {
   const [hover, setHover] = useState(false)
 
   const toggleHover = hover => {
-    console.log("HC", hover)
     setHover(hover)
   }
 

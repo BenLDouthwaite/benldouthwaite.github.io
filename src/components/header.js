@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
-import { Nav, Navbar, Button } from "react-bootstrap"
+import { Nav, Navbar } from "react-bootstrap"
 import { Helmet } from "react-helmet"
 import { BsSun, BsFillMoonFill } from "react-icons/bs"
 
@@ -12,8 +12,6 @@ const Header = props => {
     (typeof window !== "undefined" && window.localStorage.getItem("theme")) ||
     null
   const [userTheme, changeTheme] = useState(defaultThemeState)
-  const [isMobileMenuVisible, toggleMobileMenu] = useState(false)
-  const [isSubMenuVisible, toggleSubMenu] = useState(false)
 
   const onChangeTheme = () => {
     const opositeTheme =
@@ -47,19 +45,12 @@ const Header = props => {
               {header}
             </Link>
           </Nav>
-
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
             className="justify-content-end"
           >
             <Nav className="me-auto" className="justify-content-end">
-              <Link to={`/blog`} style={{ textDecoration: "none" }}>
-                Blog
-              </Link>
-              <Link to={`/projects`} style={{ textDecoration: "none" }}>
-                Projects
-              </Link>
               <Link to={`/tools`} style={{ textDecoration: "none" }}>
                 Tools
               </Link>
