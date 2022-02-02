@@ -2,42 +2,45 @@ import React, { useEffect, useState } from "react"
 import Layout from "../../components/layout"
 import { Col, Container, Row } from "react-bootstrap"
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts"
+import { graphql } from "gatsby"
 
-const ReactIndex = ({ location }) => {
-  const [initialBalance, setInitialBalance] = useState("")
-  const [interestRate, setInterestRate] = useState("")
-  const [years, setYears] = useState("")
+const ReactIndex = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+
+  const [initialBalance, setInitialBalance] = useState("1000")
+  const [interestRate, setInterestRate] = useState("5")
+  const [years, setYears] = useState("40")
   const [total, setTotal] = useState("")
 
-  const [data, setData] = useState()
+  const [values, setValues] = useState()
 
   useEffect(() => {
     let rate = 1 + interestRate / 100
     let total = initialBalance * rate ** years
     setTotal(total)
 
-    calculateData()
+    calculateValues()
   }, [initialBalance, interestRate, years])
 
-  const calculateData = () => {
-    let data = []
+  const calculateValues = () => {
+    let values = []
     let rate = 1 + interestRate / 100
 
     let currentBalance = initialBalance
     for (let i = 0; i <= years; i++) {
       let formattedBalance = parseFloat(currentBalance).toFixed(2)
-      data.push({
+      values.push({
         name: i,
         pv: formattedBalance,
       })
       currentBalance = currentBalance * rate
     }
-    setData(data)
+    setValues(values)
   }
 
   return (
     <>
-      <Layout location={location}>
+      <Layout location={location} title={siteTitle}>
         <Container>
           <h1>Compound Interest Calculator</h1>
           <br />
@@ -91,7 +94,7 @@ const ReactIndex = ({ location }) => {
               <BarChart
                 width={400}
                 height={300}
-                data={data}
+                data={values}
                 margin={{
                   top: 20,
                   right: 30,
@@ -114,3 +117,13 @@ const ReactIndex = ({ location }) => {
 }
 
 export default ReactIndex
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
