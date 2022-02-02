@@ -19,12 +19,7 @@ const ReactIndex = ({ data, location }) => {
     let total = initialBalance * rate ** years
     setTotal(total)
 
-    calculateValues()
-  }, [initialBalance, interestRate, years])
-
-  const calculateValues = () => {
     let values = []
-    let rate = 1 + interestRate / 100
 
     let currentBalance = initialBalance
     for (let i = 0; i <= years; i++) {
@@ -35,8 +30,9 @@ const ReactIndex = ({ data, location }) => {
       })
       currentBalance = currentBalance * rate
     }
+
     setValues(values)
-  }
+  }, [initialBalance, interestRate, years])
 
   return (
     <>

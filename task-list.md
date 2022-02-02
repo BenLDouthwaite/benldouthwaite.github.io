@@ -22,7 +22,7 @@ Ideally, I can keep this ordered, to pick from the top of the list when I have t
 
 ## Blog Post Ideas
 
-- [ ] Go web server + prometheus in k8s / minikube
+- [ ] Go web server + prometheus in k8s /
 - [ ] Spring Boot + Prometheus + Grafana in local k8s
 - [ ] Nginx + Prometheus + Grafana in local k8s
 

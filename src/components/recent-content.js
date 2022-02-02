@@ -15,7 +15,7 @@ const RecentContent = props => {
     <>
       <h3>Recent content</h3>
       {recentContentItems.map(item => {
-        return <RecentContentItem item={item} />
+        return <RecentContentItem item={item} key={item.link} />
       })}
     </>
   )

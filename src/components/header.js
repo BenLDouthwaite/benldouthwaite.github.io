@@ -40,33 +40,25 @@ const Header = props => {
       </Helmet>
       <header>
         <Navbar expand="sm">
-          <Nav className="me-auto">
-            <Link to={`/`} style={{ textDecoration: "none" }}>
-              {header}
-            </Link>
-          </Nav>
+          <Nav className="me-auto">{header}</Nav>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
             className="justify-content-end"
           >
-            <Nav className="me-auto" className="justify-content-end">
+            <Nav className="me-auto, justify-content-end">
               <Link to={`/tools`} style={{ textDecoration: "none" }}>
                 Tools
               </Link>
-              <Link
-                to={`/notes`}
-                style={{ textDecoration: "none" }}
-                activeStyle={{ color: "red" }}
-              >
+              <Link to={`/notes`} style={{ textDecoration: "none" }}>
                 Notes
               </Link>
               <button
                 onClick={handleClick}
                 style={{
                   cursor: "pointer",
-                  "background-color": "transparent",
-                  "background-repeat": "no-repeat",
+                  backgroundColor: "transparent",
+                  backgroundRepeat: "no-repeat",
                   border: "none",
                   overflow: "hidden",
                   outline: "none",
