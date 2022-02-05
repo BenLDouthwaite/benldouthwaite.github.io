@@ -1,0 +1,122 @@
+---
+title: Go monitoring with Prometheus
+date: "2022-02-02"
+description: ""
+---
+
+I like the standarised approach to monitoring provided by Prometheus, but have only ever used an existing setup. I wanted to try and setup the tool myself.
+
+To follow along, you should make sure you already have; Golang, Docker and Docker Compose installed
+To confirm `go version`, `docker version` and `docker-compose version` should all return info on your installation.
+
+## First Steps. Tracking request count.
+
+Lets start with a simple use case, an endpoint to return "Hello", and a [Counter](https://prometheus.io/docs/concepts/metric_types/#counter) to track the number of requests we receive.
+
+### Go App Server
+
+We'll setup a Go server to monitor. For simplicity I will avoid using any outside libraries such as mux.
+
+Create our `go.mod` with `go mod init example.com/goprometheus`
+
+And create our `main.go`
+
+```go
+package main
+
+import (
+	"fmt"
+	"net/http"
+)
+
+func main() {
+	http.HandleFunc("/hello", helloHandler)
+	http.ListenAndServe(":8080", nil)
+}
+
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello!")
+}
+```
+
+TODO add go mod init commands
+
+### Prometheus Instrumentation
+
+This is mostly following the official [Prometheus docs](todo link)
+
+add the import to our file, and enable the handler to expose metrics on a "/metrics" endpoint. This will be scraped for data when we setup our prometheus server.
+
+// TODO Go mod tidy
+
+Prometheus gives us a lot of metrics by default, but we're specifically interested in our endpoints
+
+// TODO Add data for totalRequests counter
+
+// TODO add exaple for status code and latency
+
+### Scraping the data
+
+Now that we are exposing the data, it's ready to be scraped by a Prometheus server. You can run this locally, but I find it is easier and more portable to setup a containerized solution.
+
+First, lets create a minimal Dockerfile for our Go server.
+
+```
+minimal go dockerfile
+```
+
+Now we need to add the configuration to run our prometheus server
+
+lets setup a docker-compose file to refernce our new app
+
+```
+docker-compose file
+```
+
+now we can view the prometheus server and query metrics on localhost:9000, to see the total requests.
+
+We can see the rate of requests over time using : `rate(totalRequests)` TODO create actual promQl query,
+
+## Status Code and Latency
+
+The above shows a base foundation for getting metrics from a Go server into a queryable prometheus instance, but total requests alone is not a particularly interesting metric. Lets see if we can also collect information on the status code and latency of our requests to cover some of the 4 golden signals [ link ]
+
+Also, right now our request is simply returning a string, so won't produce very interesting metrics. Lets create 2 new endpoints, each with a random delay and chance to fail.
+
+// Fast endpoint, delay between 50 - 100ms. 1 in 10 fail
+// Slow endpoint, delay between 100 - 500 ms. 1 in 5 fail
+
+- Add the extra prometheus tracking to middleware layer
+
+  - Status Code
+    - Explain why we need to have the extra type to intercept the status code in Go
+  - Latency
+    - Explain Histogram ptometheus data type
+
+### Generating Load
+
+- Add tool for generating mock traffic to the endpoints.
+
+- Add example queries for checking the status codes and latency values.
+
+It is a common pattern to expose the prometheus data to Grafana to create monitoring dashboards, but I'll save that for a future post.
+
+It is also easy enough to configure all the above to work with Kubernetes instead of Docker-Compose
+
+#### Notes from implementing, not for posting
+
+- [ ] Setup randomised load test
+
+- Summary of the query types
+  - Counter = Rate over time
+  - Gauge = Value can fluctuate up and down. Current value meaningful
+  - Histogram = frequency of observations into bucket. useful for latency.
+  - Summaries = calculate values client side, can be more expensive
+
+## Referenced articles
+
+- https://gabrieltanner.org/blog/collecting-prometheus-metrics-in-golang
+- http://jsphwllng.com/blog/goaprom
+- https://www.alexedwards.net/blog/making-and-using-middleware
+- https://stackoverflow.com/questions/53272536/how-do-i-get-response-statuscode-in-golang-middleware
+- https://dev.to/julienp/logging-the-status-code-of-a-http-handler-in-go-25aa
