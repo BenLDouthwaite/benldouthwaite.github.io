@@ -11,6 +11,7 @@ Built using gatsby, hosted on Github pages, using Amazon Route 53 for the domain
 ### Outstanding tasks:
 
 - [ ] Update page creation to tidy running for both Markdown and MDX
+  - [ ] Just swap all to mdx, don't use md at all.
 - [ ] Enable and extract MDXProvider to pass components
   - https://dev.to/adamgoth/building-a-blog-with-gatsby-and-mdx-2eh9
 - [ ] Home page design.
@@ -33,8 +34,6 @@ Built using gatsby, hosted on Github pages, using Amazon Route 53 for the domain
 - [ ] Category pages link to posts
   - [ ] `language/japanese` cat page first
 - [ ] Allow searching posts by tag
-- [ ] Create a nav bar
-  - [ ] Add a button to toggle light / dark mode
 - [ ] Clear unused CSS
 - [ ] Transfer existing React projects as a sub domain
 - [ ] Create / Update favicon.

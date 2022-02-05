@@ -11,7 +11,7 @@ const BlogIndex = ({ data, location }) => {
 
   const mdxPosts = data.allMdx.nodes
 
-  if (markdownPosts.length === 0) {
+  if (markdownPosts.length === 0 && mdxPosts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
         <Seo title="All posts" />
