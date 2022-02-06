@@ -26,6 +26,7 @@
     "gatsby-source-filesystem": "^3.2.0",
     "gatsby-transformer-remark": "^3.2.0",
     "gatsby-transformer-sharp": "^3.2.0",
+    "prism-react-renderer": "^1.2.1",
     "prismjs": "^1.25.0",
     "react": "^17.0.1",
     "react-bootstrap": "^2.0.0-beta.6",
@@ -33,6 +34,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
     "recharts": "^2.1.2",
+    "styled-components": "^5.3.3",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },
