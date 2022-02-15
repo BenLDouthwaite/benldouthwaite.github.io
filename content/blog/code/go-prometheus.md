@@ -10,10 +10,17 @@ To follow along, you should make sure you already have Go, Docker and Docker Com
 
 The post is split into several sections. Each solving a different problem.
 
-1. Providing a minimal config to track the number of requests to an endpoint of a Go app.
-2. Collect latency data
-3. Collect error / status code data
-4. Simulate traffic, and query the data
+1. Deploying a "Hello, World!" golang app to k8s.
+   - Writing our Go app.
+   - Dockerize the app.
+   - Deploy to Kubernetes.
+2. Track request count, queryable by Prometheus
+   - Add Go tracking code
+   - Configure Prometheus in Kubernetes.
+3. Collect latency data
+4. Collect error / status code data
+5. Simulate traffic
+6. Configure Grafana to Visualise
 
 ## Part 1. Tracking request count.
 
@@ -204,6 +211,8 @@ http_requests_total{path="/hello"} 3
 
 ### Scraping the data
 
+### V1. Using docker and docker-compose
+
 _Many thanks to Gabriel Tanner for his post on [Golang Application monitoring using Prometheus](https://gabrieltanner.org/blog/collecting-prometheus-metrics-in-golang) that helped me resolve several issues in this section_
 
 Now that we are exposing the data, it's ready to be scraped by a Prometheus server. You can run this locally, but I find it is easier and more portable to setup a containerized solution.
@@ -304,6 +313,16 @@ docker-compose up
 now we can view the prometheus server and query metrics on [localhost:9090](http://localhost:9090), to see the total requests.
 
 We can see the rate of requests over time using : `rate(http_requests_total{path="/hello"}[1m])`.
+
+#### v2. Using Kubernetes
+
+Ensure we have kubernetes installed locally, and can run kubectl commands. Also ensure minikube is running, to deploy onto our local cluster.
+
+https://www.bogotobogo.com/GoLang/GoLang_Web_Building_Docker_Image_and_Deploy_to_Kubernetes.php
+
+Will need to push the image to dockerhub
+
+- Need to: login, build, push
 
 ## Part 2. Latency and Errors
 
@@ -650,6 +669,16 @@ Until now, we have been testing the population of our metrics by manually hittin
 
 It is also easy enough to configure all the above to work with Kubernetes instead of Docker-Compose
 
+### Setting this up:
+
+- Use vegeta :
+
+  - `$ go get -u github.com/tsenart/vegeta`
+
+- echo "GET http://192.168.49.2:32178/hello" | ./vegeta attack -duration=5s | tee resutls.bin | ./vegeta report
+
+- If your terminal can't find the `vegeta` command after install. ensure your PATH contains the path to $GOPATH/bin , where gopath can be checked using `go env`
+
 ## Summary
 
 We have setup a Go server from scratch, and can monitor the request count, latency and errors as raw data and graphs in Prometheus.
@@ -659,16 +688,6 @@ At this point, it would be a common pattern to expose the prometheus data to Gra
 The source code for this post is available at [TODO ADD LINK](TODO NEW GITHUB REPO)
 // Link to source code, in a clean "blog-reference" repo.
 
-If you have feedback on this post, feel free to reach out to me on Twitter or LinkedIn. Links at the bottom of the page.
-
-# TODO Notes from implementing, not for posting
-
-- Why do the code blocks have padding on first line
-  - Add `display: block` to all code blocks
-- [ ] Setup randomised load test
-
-- Can I get the gatsby prism highlighting to allow line or block highlights?
-
 ## Sources
 
 - https://go.dev/doc/tutorial/create-module
@@ -677,3 +696,12 @@ If you have feedback on this post, feel free to reach out to me on Twitter or Li
 - https://gabrieltanner.org/blog/collecting-prometheus-metrics-in-golang
 - https://gobyexample.com/random-numbers
 - https://dev.to/julienp/logging-the-status-code-of-a-http-handler-in-go-25aa
+- https://www.bogotobogo.com/GoLang/GoLang_Web_Building_Docker_Image_and_Deploy_to_Kubernetes.php
+- https://flaviocopes.com/go-random/
+  https://grafana.com/docs/grafana/latest/installation/kubernetes/
+-
+
+# Part of k8s stuff, not sure if all needed
+
+- https://github.com/prometheus/prometheus/blob/main/documentation/examples/prometheus-kubernetes.yml
+- https://medium.com/kubernetes-tutorials/monitoring-your-kubernetes-deployments-with-prometheus-5665eda54045
