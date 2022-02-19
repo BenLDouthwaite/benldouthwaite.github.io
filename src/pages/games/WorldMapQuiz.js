@@ -70,24 +70,10 @@ const WorldMapQuiz = ({ data, location }) => {
 
   console.log("OH SHIT, HERE WE GO AGAIN", countryData)
 
-  // Data Initialiser
+  // Data Initialiser -> `initCountryData` will have alredy run before first render
   useEffect(() => {
     const countries =
       geographyObject.objects.ne_50m_admin_0_countries.geometries
-
-    const initCd = countries
-      .map(ctr => ctr.properties)
-      .reduce((obj, item) => {
-        return {
-          ...obj,
-          [item.NAME]: {
-            ...item,
-            guessed: false,
-          },
-        }
-      }, {})
-
-    const countryData = initCountryData()
 
     // Ensure all keys are lowercase for alternatives
     let lcKeyAlternativeCountryNames = Object.keys(
@@ -99,15 +85,15 @@ const WorldMapQuiz = ({ data, location }) => {
 
     // Pull all keys as valid answers from Country Data
     // TODO Do we also want "long names"?
-    let validGuessMap = Object.keys(initCd).reduce((obj, item) => {
+    let validGuessMap = Object.keys(countryData).reduce((obj, item) => {
       return {
         ...obj,
         [item.toLowerCase()]: item,
       }
     }, lcKeyAlternativeCountryNames)
 
-    console.log("Set Country Data Now, after init. Please", initCd)
-    setCountryData(initCd)
+    console.log("Set Country Data Now, after init. Please", countryData)
+    setCountryData(countryData)
 
     console.log("And now set valid guess map")
     setValidGuessMap(validGuessMap)
@@ -180,11 +166,7 @@ const WorldMapQuiz = ({ data, location }) => {
               <input
                 type="text"
                 value={guess}
-                onChange={e => {
-                  // TODO Can i combine?
-                  setGuess(e.target.value)
-                  // submitGuess(e.target.value)
-                }}
+                onChange={e => setGuess(e.target.value)}
               />
             </div>
             {countryData && (
