@@ -47,11 +47,14 @@ const Header = props => {
             className="justify-content-end"
           >
             <Nav className="me-auto, justify-content-end">
+              <Link to={`/blog`} style={{ textDecoration: "none" }}>
+                Blog
+              </Link>
               <Link to={`/tools`} style={{ textDecoration: "none" }}>
                 Tools
               </Link>
-              <Link to={`/notes`} style={{ textDecoration: "none" }}>
-                Notes
+              <Link to={`/sandbox`} style={{ textDecoration: "none" }}>
+                Sandbox
               </Link>
               <button
                 onClick={handleClick}

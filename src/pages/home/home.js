@@ -5,7 +5,8 @@ import RecentContent from "../../components/recent-content"
 const Home = () => {
   return (
     <Container>
-      <RecentContent />
+      <p>I'm Ben, a software engineer based in London.</p>
+      <p>This is my website, it's a work in progress.</p>
     </Container>
   )
 }

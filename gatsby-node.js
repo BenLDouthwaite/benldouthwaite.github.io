@@ -1,41 +1,8 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// TODO Update page creation to tidy running for both Markdown and MDX
-
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-
-  const mdxBlogPost = path.resolve(`./src/templates/mdx-blog-post.js`)
-
-  const mdxResult = await graphql(`
-    query {
-      allMdx {
-        nodes {
-          id
-          slug
-        }
-      }
-    }
-  `)
-
-  if (mdxResult.errors) {
-    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
-  }
-
-  // create blog post pages
-  const mdxPosts = mdxResult.data.allMdx.nodes
-
-  // call `createPage` for each result
-  mdxPosts.forEach((node, index) => {
-    createPage({
-      path: node.slug,
-      component: mdxBlogPost,
-      // you can use the values in this context in
-      // our page layout component
-      context: { id: node.id },
-    })
-  })
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)

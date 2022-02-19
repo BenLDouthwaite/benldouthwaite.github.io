@@ -4,7 +4,7 @@ import { Col, Container, Row } from "react-bootstrap"
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts"
 import { graphql } from "gatsby"
 
-const ReactIndex = ({ data, location }) => {
+const Calculator = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   const [initialBalance, setInitialBalance] = useState("1000")
@@ -112,7 +112,7 @@ const ReactIndex = ({ data, location }) => {
   )
 }
 
-export default ReactIndex
+export default Calculator
 
 export const pageQuery = graphql`
   query {
