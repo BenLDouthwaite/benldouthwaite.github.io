@@ -3,88 +3,58 @@ import { graphql } from "gatsby"
 
 import Layout from "../../components/layout"
 import MapChart from "../../components/MapChart"
-import { Col, Container, Row } from "react-bootstrap"
+import { Col, Container, Row, ToggleButton } from "react-bootstrap"
 
 import geographyObject from "../../data/mapData.json" // = 241 countries
 // import geographyObject from "../../data/mapDataDetailed.json" // = 255 countries
 
 import ReactTooltip from "react-tooltip"
 
+// TODO These are quite brittle, need to match source data exactly.
+// Possibly better to use ISO code, then language agnostic
 const alternativeCountryNames = {
   uk: "United Kingdom",
-  frn: "France",
+  usa: "United States of America",
 }
+
 const initCountryData = () => {
+  console.log("init country data. Should be called only once")
+
   // 10 or 50 = scaling of the map
   // todo how to process these automatically when updating source?
+
   // const countries = geographyObject.objects.ne_10m_admin_0_countries.geometries
   const countries = geographyObject.objects.ne_50m_admin_0_countries.geometries
 
-  const countriesArray = countries.map(ctr => ctr.properties)
-
-  const countryData = countriesArray.reduce((obj, item) => {
-    return {
-      ...obj,
-      [item.NAME]: {
-        ...item,
-        guessed: false,
-      },
-    }
-  }, {})
-
-  console.log("Country Data", countryData)
-
-  // console.log("Generate valid guess map")
-
-  // let validGuessMap = countriesArray.reduce((obj, item) => {
-  //   return {
-  //     ...obj,
-  //     [item.NAME]: item.NAME,
-  //   }
-  // }, alternativeCountryNames)
-
-  // // TODO use valid guess on itput to check if exists in the keyset.
-  // console.log("Valid guess map ", validGuessMap)
+  const countryData = countries
+    .map(ctr => ctr.properties)
+    .reduce((obj, item) => {
+      return {
+        ...obj,
+        [item.NAME]: {
+          ...item,
+          guessed: false,
+        },
+      }
+    }, {})
 
   return countryData
 }
 
-// TODO Can I pre-calculate a map of all valid guesses, to their "correct" country NAME
 const matchingGuessKey = (originalGuess, countryData, validGuessMap) => {
-  console.log("OG, VGM", originalGuess, validGuessMap)
-
   let guess = originalGuess.toLowerCase()
-
   if (guess in validGuessMap) {
     const key = validGuessMap[guess]
+
+    if (countryData[key].guessed) {
+      return null
+    }
+
     console.log("RETURN KEY", key)
     return key
   }
 
   return null
-
-  // console.log("VGM", validGuessMap)
-
-  // let guess = originalGuess.toLowerCase()
-
-  // let unguessedCountries = Object.values(countryData).filter(
-  //   ctr => !ctr.guessed
-  // )
-
-  // let matchingCountry = unguessedCountries.find(ctr => {
-  //   // TODO Add all matching rules.
-  //   let lcname = ctr.NAME.toLowerCase()
-  //   console.log(`COMPARE: ${lcname} and ${guess}`)
-  //   return lcname === guess
-  // })
-
-  // if (matchingCountry !== undefined) {
-  //   return matchingCountry.NAME
-  // }
-
-  // return null
-
-  // return guess in countryData && !countryData[guess].guessed
 }
 
 const WorldMapQuiz = ({ data, location }) => {
@@ -93,17 +63,31 @@ const WorldMapQuiz = ({ data, location }) => {
   const [guess, setGuess] = useState("")
   const [countryData, setCountryData] = useState(() => initCountryData())
   const [content, setContent] = useState("")
+  const [showDebug, setShowDebug] = useState(false)
 
   // All keys lowercased.
   const [validGuessMap, setValidGuessMap] = useState(null)
 
+  console.log("OH SHIT, HERE WE GO AGAIN", countryData)
+
+  // Data Initialiser
   useEffect(() => {
-    console.log("USE EFFECT CALLED")
-    console.log("Generate valid guess map")
+    const countries =
+      geographyObject.objects.ne_50m_admin_0_countries.geometries
 
-    let countriesArray = Object.keys(countryData)
+    const initCd = countries
+      .map(ctr => ctr.properties)
+      .reduce((obj, item) => {
+        return {
+          ...obj,
+          [item.NAME]: {
+            ...item,
+            guessed: false,
+          },
+        }
+      }, {})
 
-    console.log("COuntries Array", countriesArray)
+    const countryData = initCountryData()
 
     // Ensure all keys are lowercase for alternatives
     let lcKeyAlternativeCountryNames = Object.keys(
@@ -113,40 +97,76 @@ const WorldMapQuiz = ({ data, location }) => {
       return acc
     }, {})
 
-    let validGuessMap = countriesArray.reduce((obj, item) => {
+    // Pull all keys as valid answers from Country Data
+    // TODO Do we also want "long names"?
+    let validGuessMap = Object.keys(initCd).reduce((obj, item) => {
       return {
         ...obj,
         [item.toLowerCase()]: item,
       }
     }, lcKeyAlternativeCountryNames)
 
-    // TODO use valid guess on itput to check if exists in the keyset.
-    console.log("Valid guess map ", validGuessMap)
+    console.log("Set Country Data Now, after init. Please", initCd)
+    setCountryData(initCd)
 
+    console.log("And now set valid guess map")
     setValidGuessMap(validGuessMap)
+
+    // initialiseData(setCountryData, setValidGuessMap)
+  }, [])
+
+  useEffect(() => {
+    console.log("Country Data Changed", countryData)
   }, [countryData])
 
-  // TODO Where should this method sit?
-  const submitGuess = guess => {
-    let key = matchingGuessKey(guess, countryData, validGuessMap)
-    if (key !== null) {
-      let ctr = { ...countryData }
+  useEffect(() => {
+    console.log("Guess updated", guess, countryData)
 
-      ctr[key] = {
-        ...ctr[key],
-        guessed: true,
+    let ctr = { ...countryData }
+
+    // Set matching found
+    // TODO Where is the best place for this method?
+    if (guess != "") {
+      let key = matchingGuessKey(guess, countryData, validGuessMap)
+      if (key !== null) {
+        ctr[key].guessed = true
+        setGuess("")
       }
-
-      setCountryData(ctr)
-      setGuess("")
     }
-  }
 
-  const correctGuesses = Object.values(countryData).filter(ctr => ctr.guessed)
-    .length
+    // Null on first render, before creation.
+    if (validGuessMap !== null) {
+      // Check highlighting for any given guess (including empty)
+
+      // How to handle this better? Issue with many names, can be set to highlight, then cleared.
+      // If not yet set, check again. If already set this iteration, skip it.
+      let highlightedCountries = new Map()
+      Object.keys(validGuessMap).forEach(validGuess => {
+        let countryName = validGuessMap[validGuess]
+
+        if (highlightedCountries.get(countryName) === true) {
+          return
+        }
+
+        if (guess != "" && validGuess.startsWith(guess.toLowerCase())) {
+          ctr[countryName].highlight = true
+          highlightedCountries.set(countryName, true)
+        } else {
+          ctr[countryName].highlight = false
+        }
+      })
+    }
+
+    setCountryData(ctr)
+  }, [guess])
+
+  const correctGuesses = countryData
+    ? Object.values(countryData).filter(ctr => ctr.guessed).length
+    : 0
 
   const debugStyles = {
     border: "5px solid rgba(255, 0, 0, 0.5)",
+    // width: "2000px",
   }
 
   return (
@@ -163,13 +183,26 @@ const WorldMapQuiz = ({ data, location }) => {
                 onChange={e => {
                   // TODO Can i combine?
                   setGuess(e.target.value)
-                  submitGuess(e.target.value)
+                  // submitGuess(e.target.value)
                 }}
               />
             </div>
-            <p>
-              Guessed : {correctGuesses} / {Object.keys(countryData).length}
-            </p>
+            {countryData && (
+              <p>
+                Guessed : {correctGuesses} / {Object.keys(countryData).length}
+              </p>
+            )}
+
+            <ToggleButton
+              id="toggle-check"
+              type="checkbox"
+              variant="secondary"
+              checked={showDebug}
+              value="1"
+              onChange={e => setShowDebug(e.currentTarget.checked)}
+            >
+              show debug
+            </ToggleButton>
             <div style={debugStyles}>
               <MapChart
                 geographies={geographyObject}
@@ -179,16 +212,18 @@ const WorldMapQuiz = ({ data, location }) => {
               <ReactTooltip>{content}</ReactTooltip>
             </div>
           </Col>
-          <Col xs={1}>
-            DEBUG : Object.values?
-            <ul>
-              {Object.values(countryData)
-                .filter(ctr => !ctr.guessed)
-                .map(ctr => {
-                  return <p key={ctr.name}>{ctr.name}</p>
-                })}
-            </ul>
-          </Col>
+          {showDebug && (
+            <Col xs={1}>
+              DEBUG : Object.values?
+              <ul>
+                {Object.values(countryData)
+                  .filter(ctr => !ctr.guessed)
+                  .map(ctr => {
+                    return <p key={ctr.NAME}>{ctr.NAME}</p>
+                  })}
+              </ul>
+            </Col>
+          )}
         </Row>
       </Container>
     </Layout>

@@ -3,7 +3,6 @@ import { Canvas } from "../../components/Canvas"
 import { getHexagonsToFillZone } from "../../components/random-helpers"
 import { Hexagon } from "../../components/Hexagon"
 import { useDimensions } from "../../components/use-dimensions"
-import Layout from "../../components/layout"
 
 const CanvasPage = () => {
   const [ref, { width, height, dpr }] = useDimensions()

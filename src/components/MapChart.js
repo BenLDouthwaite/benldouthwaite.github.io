@@ -31,8 +31,16 @@ const MapChart = ({ geographies, countryData, setTooltipContent }) => {
               if (geo.properties.NAME !== undefined) {
                 let countryName = geo.properties.NAME
                 if (countryData[countryName] !== undefined) {
-                  if (countryData[countryName].guessed) {
+                  let country = countryData[countryName]
+
+                  // If guessed, set cleared
+                  if (country.guessed) {
                     fillColour = "#FF0000"
+                  }
+
+                  // If matching current guess (and easy mode selected, to be added as a switch)
+                  else if (country.highlight) {
+                    fillColour = "#00FF00"
                   }
                 }
               }
@@ -41,7 +49,7 @@ const MapChart = ({ geographies, countryData, setTooltipContent }) => {
                 <Geography
                   onMouseEnter={() => {
                     const { NAME } = geo.properties
-                    if (countryData[NAME].guessed) {
+                    if (NAME in countryData && countryData[NAME].guessed) {
                       setTooltipContent(`${NAME}`)
                     }
                   }}
