@@ -15,11 +15,10 @@ import ReactTooltip from "react-tooltip"
 const alternativeCountryNames = {
   uk: "United Kingdom",
   usa: "United States of America",
+  aland: "Åland",
 }
 
 const initCountryData = () => {
-  console.log("init country data. Should be called only once")
-
   // 10 or 50 = scaling of the map
   // todo how to process these automatically when updating source?
 
@@ -50,7 +49,6 @@ const matchingGuessKey = (originalGuess, countryData, validGuessMap) => {
       return null
     }
 
-    console.log("RETURN KEY", key)
     return key
   }
 
@@ -67,8 +65,6 @@ const WorldMapQuiz = ({ data, location }) => {
 
   // All keys lowercased.
   const [validGuessMap, setValidGuessMap] = useState(null)
-
-  console.log("OH SHIT, HERE WE GO AGAIN", countryData)
 
   // Data Initialiser -> `initCountryData` will have alredy run before first render
   useEffect(() => {
@@ -92,22 +88,14 @@ const WorldMapQuiz = ({ data, location }) => {
       }
     }, lcKeyAlternativeCountryNames)
 
-    console.log("Set Country Data Now, after init. Please", countryData)
     setCountryData(countryData)
 
-    console.log("And now set valid guess map")
     setValidGuessMap(validGuessMap)
 
     // initialiseData(setCountryData, setValidGuessMap)
   }, [])
 
   useEffect(() => {
-    console.log("Country Data Changed", countryData)
-  }, [countryData])
-
-  useEffect(() => {
-    console.log("Guess updated", guess, countryData)
-
     let ctr = { ...countryData }
 
     // Set matching found

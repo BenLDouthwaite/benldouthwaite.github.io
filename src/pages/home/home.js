@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <Container>
       <p>I'm Ben, a software engineer based in London.</p>
-      <p>This is my website, it's a work in progress.</p>
+      <p>This is my website, it's a work in progress!</p>
     </Container>
   )
 }
