@@ -1,5 +1,7 @@
 import styles from './App.module.css';
 
+import { A } from "@solidjs/router";
+
 function App() {
   return (
     <div id="container">
@@ -7,9 +9,7 @@ function App() {
             <h1>Ben Douthwaite</h1>
             <p>Software Engineer based in London, UK.</p>
             <ul class="directory-list">
-                <li>Projects</li>
-                <li>Dev Blog</li>
-                <li>About</li>
+                <li><A href="/playground">Playground</A></li>
                 <li>Contact</li>
             </ul>
         </div>
