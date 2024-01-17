@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import Playground from './pages/Playground';
 import ColourTester from './pages/ColourTester';
-import { Router, Route } from "@solidjs/router";
+import { HashRouter, Route } from "@solidjs/router";
 const root = document.getElementById('root');
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
@@ -16,11 +16,11 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 
 render(
   () => (
-    <Router>
+    <HashRouter>
       <Route path="/" component={App} />
       <Route path="/playground" component={Playground} />
       <Route path="/playground/colour-tester" component={ColourTester} />
-    </Router>
+    </HashRouter>
   ),
   root
 );
