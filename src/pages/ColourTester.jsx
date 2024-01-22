@@ -48,7 +48,7 @@ export default function ColourTester() {
                         setSecondaryBackgroundColour(getRandomColour());
                         colourTester.style.setProperty("--secondary-background-color", secondaryBackgroundColour());
 
-                    }}>Randomise</button>
+                    }}>Randomise colours</button>
                 </div>
 
             </div>

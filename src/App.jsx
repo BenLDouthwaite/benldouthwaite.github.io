@@ -9,6 +9,7 @@ function App() {
             <h1>Ben Douthwaite</h1>
             <p>Software Engineer based in London, UK.</p>
             <ul class="directory-list">
+                <li><A href="/projects">Projects</A></li>
                 <li><A href="/playground">Playground</A></li>
                 <li>Contact</li>
             </ul>
